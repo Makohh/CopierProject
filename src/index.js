@@ -1,34 +1,34 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './index.css';
-import App from './App';
-import PrinterDetail from './components/PrinterDetail';
-import Home from './components/Home';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import "./index.css";
+import App from "./App";
+import PrinterDetail from "./components/PrinterDetail";
+import Home from "./components/Home";
+import reportWebVitals from "./reportWebVitals";
 
 // Create router with proper basename configuration
 const router = createBrowserRouter(
   [
     {
-      path: '/',
+      path: "/",
       element: <App />,
       children: [
         {
           index: true,
-          element: <Home />
+          element: <Home />,
         },
         {
-          path: '/printer/:id',
-          element: <PrinterDetail />
-        }
-      ]
-    }
+          path: "/printer/:id",
+          element: <PrinterDetail />,
+        },
+      ],
+    },
   ],
   { basename: process.env.PUBLIC_URL }
 );
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <RouterProvider router={router} />
