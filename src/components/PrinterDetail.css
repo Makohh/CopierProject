@@ -1,0 +1,104 @@
+.printer-detail {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.printer-detail-container {
+  max-width: 900px;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: #888;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.15s ease;
+}
+
+.back-link:hover {
+  color: #0070f3;
+}
+
+.printer-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(to right, #0070f3, #00a8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.printer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .printer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.printer-image img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.description-section,
+.capabilities-section {
+  margin-bottom: 2rem;
+}
+
+.description-section h2,
+.capabilities-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #0070f3;
+}
+
+.capabilities-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.capabilities-list li {
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: flex-start;
+}
+
+.capability-bullet {
+  color: #0070f3;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.printer-not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.printer-not-found h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.printer-not-found .back-link {
+  margin-top: 2rem;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #0070f3;
+  border-radius: 5px;
+}
