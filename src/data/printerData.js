@@ -1,44 +1,230 @@
 const printerData = [
   {
-    id: '1',
-    name: 'Prusa i3 MK3S+',
-    brand: 'Prusa Research',
-    description: 'The Prusa i3 MK3S+ is the latest version of the award-winning open-source 3D printers by Josef Prusa. It features exceptional print quality, reliability, and a wide range of supported materials.',
-    image: 'prusa-i3.jpg',
-    capabilities: [
-      'Print volume: 250 × 210 × 210 mm',
-      'Layer height: 0.05 - 0.35 mm',
-      'Material compatibility: PLA, PETG, ASA, ABS, PC, CPE, PVA/BVOH, PVB, HIPS, PP, Flex, nGen, Nylon, Carbon-filled, and more',
-      'Automatic mesh bed leveling',
-      'Filament sensor'
+    id: 1,
+    name: 'Desktop Printers',
+    brand: 'Kyocera',
+    children: [
+      {
+        id: 11,
+        name: 'Black & White',
+        brand: 'Kyocera',
+        children: [
+          {
+            id: 111,
+            name: 'Ecosys P2040dw',
+            brand: 'Kyocera'
+          },
+          {
+            id: 112,
+            name: 'Ecosys P2235dw',
+            brand: 'Kyocera'
+          },
+          {
+            id: 113,
+            name: 'Ecosys PA4000wx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 114,
+            name: 'Ecosys PA4500x',
+            brand: 'Kyocera'
+          },
+          {
+            id: 115,
+            name: 'Ecosys PA5000x',
+            brand: 'Kyocera'
+          },
+          {
+            id: 116,
+            name: 'Ecosys PA5500x',
+            brand: 'Kyocera'
+          },
+          {
+            id: 117,
+            name: 'Ecosys PA6000x',
+            brand: 'Kyocera'
+          }
+        ]
+      },
+      {
+        id: 12,
+        name: 'Color',
+        brand: 'Kyocera',
+        children: [
+          {
+            id: 121,
+            name: 'Ecosys P5026cdw',
+            brand: 'Kyocera'
+          },
+          {
+            id: 122,
+            name: 'Ecosys PA4000cx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 123,
+            name: 'Ecosys PA3500cx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 124,
+            name: 'TASKalfa PA4500ci',
+            brand: 'Kyocera'
+          }
+        ]
+      }
     ]
   },
   {
-    id: '2',
-    name: 'Creality Ender 3 V2',
-    brand: 'Creality',
-    description: 'The Ender 3 V2 is an upgraded version of the popular Ender 3 printer. It offers a user-friendly design, silent motherboard, and improved stability for consistent high-quality prints.',
-    image: 'ender-3-v2.jpg',
-    capabilities: [
-      'Print volume: 220 × 220 × 250 mm',
-      'Layer height: 0.1 - 0.4 mm',
-      'Material compatibility: PLA, TPU, PETG, ABS',
-      'Silent stepper drivers',
-      'Tempered glass build plate'
+    id: 2,
+    name: 'Desktop MFPs',
+    brand: 'Kyocera',
+    children: [
+      {
+        id: 21,
+        name: 'Black & White',
+        brand: 'Kyocera',
+        children: [
+          {
+            id: 211,
+            name: 'Ecosys M2040dn',
+            brand: 'Kyocera'
+          },
+          {
+            id: 212,
+            name: 'Ecosys M2640idw',
+            brand: 'Kyocera'
+          },
+          {
+            id: 213,
+            name: 'Ecosys MA4000wifx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 214,
+            name: 'Ecosys MA400wfx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 215,
+            name: 'Ecosys MA4500ifx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 216,
+            name: 'Ecosys MA5500ifx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 217,
+            name: 'Ecosys MA6000ifx',
+            brand: 'Kyocera'
+          }
+        ]
+      },
+      {
+        id: 22,
+        name: 'Color',
+        brand: 'Kyocera',
+        children: [
+          {
+            id: 221,
+            name: 'Ecosys M5526cdw',
+            brand: 'Kyocera'
+          },
+          {
+            id: 222,
+            name: 'Ecosys MA2100cwfx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 223,
+            name: 'Ecosys MA3500cifx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 224,
+            name: 'Ecosys MA4000cifx',
+            brand: 'Kyocera'
+          },
+          {
+            id: 225,
+            name: 'Ecosys MA4000cix',
+            brand: 'Kyocera'
+          }
+        ]
+      }
     ]
   },
   {
-    id: '3',
-    name: 'Elegoo Mars 2 Pro',
-    brand: 'Elegoo',
-    description: 'The Elegoo Mars 2 Pro is a resin 3D printer that features a monochrome LCD for faster printing and longer screen life. It offers high precision and detail perfect for miniatures and jewelry.',
-    image: 'elegoo-mars-2.jpg',
-    capabilities: [
-      'Print volume: 129 × 80 × 160 mm',
-      'Layer height: 0.01 - 0.2 mm',
-      'XY resolution: 0.05 mm',
-      'UV wavelength: 405nm',
-      'Built-in air filtration system'
+    id: 3,
+    name: 'Full MFPs',
+    brand: 'Kyocera',
+    children: [
+      {
+        id: 31,
+        name: 'Black & White',
+        brand: 'Kyocera',
+        children: [
+          {
+            id: 311,
+            name: 'TA-4004i',
+            brand: 'Kyocera'
+          },
+          {
+            id: 312,
+            name: 'TA-5004i',
+            brand: 'Kyocera'
+          },
+          {
+            id: 313,
+            name: 'TA-6004i',
+            brand: 'Kyocera'
+          },
+          {
+            id: 314,
+            name: 'TA-7004i',
+            brand: 'Kyocera'
+          }
+        ]
+      },
+      {
+        id: 32,
+        name: 'Color',
+        brand: 'Kyocera',
+        children: [
+          {
+            id: 321,
+            name: 'TA-2554ci',
+            brand: 'Kyocera'
+          },
+          {
+            id: 322,
+            name: 'TA-3554ci',
+            brand: 'Kyocera'
+          },
+          {
+            id: 323,
+            name: 'TA-4054ci',
+            brand: 'Kyocera'
+          },
+          {
+            id: 324,
+            name: 'TA-5054ci',
+            brand: 'Kyocera'
+          },
+          {
+            id: 325,
+            name: 'TA-6054ci',
+            brand: 'Kyocera'
+          },
+          {
+            id: 326,
+            name: 'TA-7054ci',
+            brand: 'Kyocera'
+          }
+        ]
+      }
     ]
   }
 ];

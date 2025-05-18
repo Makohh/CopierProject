@@ -5,9 +5,9 @@ import printerData from '../data/printerData';
 function Home() {
   return (
     <>
-      <h1 className="App-title">3D Printer Directory</h1>
+      <h1 className="App-title">Kyocera Copiers</h1>
       <p className="App-description">
-        Explore our collection of top-rated 3D printers
+        Explore our collection of high-quality Kyocera copiers
       </p>
       <div className="App-card-grid">
         {printerData.map((printer) => (

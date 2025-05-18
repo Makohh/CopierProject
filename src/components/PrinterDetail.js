@@ -5,13 +5,23 @@ import './PrinterDetail.css';
 
 function PrinterDetail() {
   const { id } = useParams();
-  const printer = printerData.find(p => p.id === id);
+  const findPrinter = (id, items) => {
+    for (let item of items) {
+      if (item.id === parseInt(id)) return item;
+      if (item.children) {
+        const found = findPrinter(id, item.children);
+        if (found) return found;
+      }
+    }
+    return null;
+  };
+
+  const printer = findPrinter(id, printerData);
   
   if (!printer) {
     return (
       <div className="printer-not-found">
-        <h2>Printer Not Found</h2>
-        <p>The printer you're looking for doesn't exist or has been removed.</p>
+        <h2>Category Not Found</h2>
         <Link to="/" className="back-link">Back to Directory</Link>
       </div>
     );
@@ -27,27 +37,28 @@ function PrinterDetail() {
         </div>
         
         <div className="printer-content">
-          <div className="printer-image">
-            <img src={`${process.env.PUBLIC_URL}/images/${printer.image}`} alt={printer.name} />
-          </div>
-          
-          <div>
-            <div className="description-section">
-              <h2>Description</h2>
-              <p>{printer.description}</p>
+          {printer.children ? (
+            <div className="App-card-grid">
+              {printer.children.map((subPrinter) => (
+                <Link 
+                  to={`/printer/${subPrinter.id}`} 
+                  key={subPrinter.id} 
+                  className="App-card"
+                >
+                  <div>
+                    <h3>{subPrinter.name}</h3>
+                    <p>{subPrinter.brand}</p>
+                  </div>
+                  <span className="App-card-arrow">→</span>
+                </Link>
+              ))}
             </div>
-            
-            <div className="capabilities-section">
-              <h2>Capabilities</h2>
-              <ul className="capabilities-list">
-                {printer.capabilities.map((capability, index) => (
-                  <li key={index}>
-                    <span className="capability-bullet">•</span> {capability}
-                  </li>
-                ))}
-              </ul>
+          ) : (
+            <div className="attachments-section">
+              <h2>Attachments</h2>
+              <p>Attachment options will be available soon.</p>
             </div>
-          </div>
+          )}
         </div>
       </div>
     </div>
